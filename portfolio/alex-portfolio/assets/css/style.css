@@ -9,8 +9,10 @@
 }
 
 .banniere-bg{
-    height: 250px;
-    background-image: url("assets/img/portfolio1.png");
+    height: 800px;
+    background-image: url("../img/profil.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .title{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -21,3 +23,40 @@ div .container-fluid img {
     border-radius: 50%;
     margin-right: 10px;
 }
+.navbar{
+    background-color: #badc58;
+    /* position: fixed; */
+}
+
+.about , .contact{
+    background-color: #dff9fb;
+}
+
+/* banniere style start here */
+
+.baniere-text{
+    margin-top: 150px !important;
+    color: #dff9fb;
+    font-weight: bold;
+}
+
+/* banniere style ends here */
+
+/* footer style start here */
+    .footer{
+        background-color: black;
+        height: 200px;
+    }
+    .container-fluid .pt-5{
+        color: white;
+
+        font-weight: bolder;
+    }
+    .copyright{
+        color: white;
+    }
+    p{
+        color: #6ab04c;
+    }
+/* footer style ends here */
+
