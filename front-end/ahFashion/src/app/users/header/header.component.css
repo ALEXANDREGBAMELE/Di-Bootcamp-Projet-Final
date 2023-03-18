@@ -1,0 +1,18 @@
+
+  
+      .info-perso{
+        border-bottom: violet 5px solid !important;
+      }
+
+      .bg-body-tertiary{
+        background-color: blueviolet !important;
+      }
+
+      /* style du sidebar */
+      .sidebar{
+        background-color: rgb(109, 109, 248) !important;
+        width: 1030px;
+      }
+      .logo{
+        margin-right: 150px;
+      } 

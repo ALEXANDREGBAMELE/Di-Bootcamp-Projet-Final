@@ -9,18 +9,28 @@ import { AtelierComponent } from './components/ateliers/atelier/atelier.componen
 import { TissuComponent } from './components/tissus/tissu/tissu.component';
 import { ContactComponent } from './components/contacts/contact/contact.component';
 import { FooterComponent } from './components/footers/footer/footer.component';
-import { HomeComponent } from './pages/home/home.component';
+
 import { StylisteComponent } from './pages/styliste/styliste.component';
 import { ListStylisteComponent } from './components/stylistes/list-styliste/list-styliste.component';
 import { CommandesComponent } from './pages/commandes/commandes.component';
 import { HttpClientModule } from '@angular/common/http';
-import { LoginComponent } from './pages/authentication/login/login.component';
-import { RegisterComponent } from './pages/authentication/register/register.component';
-import { UsersComponent } from './components/users/users.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DesignsComponent } from './pages/design/designs.component';
 import { DesignComponent } from './components/design/design.component';
 import { ProfilUserComponent } from './pages/profil-user/profil-user.component';
+import { SidenavComponent } from './users/sidenav/sidenav.component';
+import { HeaderComponent } from './users/header/header.component';
+import { DashbordComponent } from './users/Dashbord/dashbord.component';
+import { HommeComponent } from './users/home/home.component';
+import { LivreurComponent } from './users/livreurs/dashbord/livreur.component';
+import { DashbordRoutingModule } from './users/routes/dashbord.routing';
+import { ViewComponent } from './pages/view/view/view.component';
+import { RegisterComponent } from './authentication/register/register.component';
+import { CatalogueComponent } from './users/couturiers/catalogues/catalogue/catalogue.component';
+import { CatalogueAddFormComponent } from './users/couturiers/catalogues/catalogue-add-form/catalogue-add-form.component';
+import { PosterComponent } from './users/couturiers/publication/poster/poster.component';
+import { CommandeFormComponent } from './pages/commandes/commande-form/commande-form.component';
+
 
 @NgModule({
   declarations: [
@@ -32,17 +42,25 @@ import { ProfilUserComponent } from './pages/profil-user/profil-user.component';
             TissuComponent,
             ContactComponent,
             FooterComponent,
-            HomeComponent,
             StylisteComponent,
             ListStylisteComponent,
             CommandesComponent,
-            LoginComponent,
-            RegisterComponent,
-            UsersComponent,
             DesignsComponent,
             DesignComponent,
-            ProfilUserComponent
-
+            ProfilUserComponent,
+            SidenavComponent,
+            HeaderComponent,
+            DashbordComponent,
+            HommeComponent,
+            LivreurComponent,
+            SlideComponent,
+            ViewComponent,
+            RegisterComponent,
+            CatalogueComponent,
+            CatalogueAddFormComponent,
+            PosterComponent,
+            CommandeFormComponent,
+            
         
   ],
   imports: [
@@ -51,6 +69,7 @@ import { ProfilUserComponent } from './pages/profil-user/profil-user.component';
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
+    DashbordRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

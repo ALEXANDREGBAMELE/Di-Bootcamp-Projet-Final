@@ -4,4 +4,5 @@ export interface Design {
     imgUrl : string,
     description : string,
     price : number,
+    category : string,
 }

@@ -1,4 +1,107 @@
 
+
+
+
+.container .navbar{
+    height: 70px;
+    border: 2px solid red;
+    margin-top: 15px;
+    /* background-color: #D980FA; */
+}
+
+/* Navbar style */
+.navbar{
+    border-bottom: 2px solid #18A0FB;
+}
+.nav-link{
+    color: #D980FA !important ;
+    font-size: 28px !important;
+    font-weight: bold !important;
+}
+
+/* carousel style */
+.carousel-item{
+    /* width: 1000px !important; */
+    /* height: 500px !important; */
+    /* border: 2px solid red;
+    margin-left: 130px;
+    margin-top: 15px; */
+
+
+}
+
+.col-md-3 .card img{
+    /* width: 100%; */
+    height: 200px;
+}
+
+.container-fluid .baniere{
+    height: 200px;
+    border: 2px solid #D980FA;
+    margin-top: 15px;
+    background-color: #18A0FB;
+    background-color: #D980FA;
+}
+
+
+
+
+
+
+
+.container .footer{
+    height: 250px;
+    border: 2px solid red;
+    margin-top: 15px;
+    background-color: rgb(14, 13, 15);
+}
+
+.col-md-2 .card, .col-md-2 .card .model img {
+    height: 150px !important;
+}
+
+.footer{
+    background-color: #D980FA;
+}
+
+/* style inscription */
+.container .bg-warning{
+    height: 500px;
+    width: 800px;
+}
+/* .mll-5{
+    margin-left: 350px;
+} */
+.row .col-md-4 .card, .row .col-md-4 .card .model img{
+    width: 300px !important;
+    height: 300px !important;
+}
+.sc-1 .card, .sc .card img {
+    width: 100% !important;
+    /* height: 100px!important; */
+    
+}
+
+
+.telcom .card{
+    background-color: #18A0FB;
+   
+}
+.m-row{
+    background-color: #18A0FB;
+}
+
+.title{
+    border-bottom: #18A0FB solid 5px;
+    margin-left: 400px;
+    margin-right: 400px;
+    color: #D980FA;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    text-shadow: gainsboro(23 5 -7);
+}
+
+
 .container .navbar{
     height: 70px;
     border: 2px solid red;

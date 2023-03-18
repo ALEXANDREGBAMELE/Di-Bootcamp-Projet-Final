@@ -1,0 +1,52 @@
+<!-- main app container -->
+        <form>
+            <table>
+                <tr>
+                    <td class="text-center"><label for="firstname">First Name</label></td>
+                    <td><input type="text" name="firstname" [(ngModel)]="user.firstname"  class="form-control"></td>
+
+                </tr>
+
+                <tr>
+                    <td><label for="lastname">Last Name</label></td> 
+                    <td><input type="text" name="lastname" [(ngModel)]="user.lastname" class="form-control"></td>
+              
+                </tr>
+
+                <tr>
+                    <td><label for="date-naiss">Date de Naissance</label></td> 
+                    <td><input type="text" name="date-naiss" [(ngModel)]="user.lastname" class="form-control"></td>
+              
+                </tr>
+
+                <tr>
+                   <td> <label for="email">Email</label></td>
+                   <td> <input type="text" name="email" [(ngModel)]="user.email" class="form-control"></td>
+                </tr>
+                <tr>
+                   <td> <label for="password">Password</label></td>
+                   <td> <input type="password" name="password" [(ngModel)]="user.password" class="form-control"></td>
+                   
+                </tr>
+
+                <tr>
+                   <td> <label for="confirmPassword">Confirm Password</label></td>
+                   <td> <input type="password" name="confirmPassword" [(ngModel)]="user.confirmPassword"  class="form-control"></td>
+              
+                </tr>
+                <tr>
+                    <td> <label for="role">Confirm Password</label></td>
+                    <select name="role" id="">
+                        <option value="">couturier</option>
+                        <option value="">Livreur </option>
+                        <option value="">Autre</option>
+                    </select>
+               
+                 </tr>
+                <tr>
+                   <td> <button type="submit" class="btn btn-primary mr-1" (click)="addUser()">Register</button></td>
+                   <td> <button class="btn btn-secondary" type="reset">Cancel</button></td>
+                </tr>
+
+            </table>
+        </form>

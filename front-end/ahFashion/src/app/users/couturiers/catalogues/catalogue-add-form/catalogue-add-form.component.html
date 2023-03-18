@@ -1,0 +1,45 @@
+<div class="container">
+    <fieldset>
+        <legend>Ajouter un modele</legend>
+        <form action="">
+            <table>
+                <tr>
+                    <td><label for="">Ajouter un photo</label></td>
+                    <td><input class="form-control" type="file" name="photoAdd" id=""  [(ngModel)]="design.imgUrl"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="">Nom du modele</label></td>
+                    <td><input class="form-control" type="text" name="modeleName" id="" [(ngModel)]="design.label" ></td>
+                </tr>
+                <tr>
+                    <td><label for="">Description</label></td>
+                    <td><textarea name="descripton" id="" cols="30" rows="10" [(ngModel)]="design.description"></textarea></td>
+                </tr>
+                <tr>
+                    <td><label for="">Category</label></td>
+                    <td><select name="" id="" name="category" [(ngModel)]="design.category">
+                            <option value="Enfant">Enfant</option>
+                            <option value="Femme">Femme</option>
+                            <option value="Homme">Homme</option>
+                            <option value="Couple">Couple</option>
+                            <option value="Famille">Famille</option>
+                        </select>
+                    </td>
+                    <tr>
+                        <td><label for="price">Le cout</label></td>
+                        <td><input class="form-control" type="number" name="price" id="" [(ngModel)]="design.label" ></td>
+                    </tr>
+
+                <tr>
+                    <td></td>
+                    <td><input type="reset" name="" id="" onclick="addDesign()" class="p-4"> <input type="submit" name="" id="" class="p-4">
+                    </td>
+                </tr>
+               
+            </table>
+
+        </form>
+    </fieldset>
+
+</div>

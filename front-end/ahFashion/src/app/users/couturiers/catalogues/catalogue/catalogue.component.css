@@ -1,0 +1,12 @@
+.btn{
+    border-radius: 10px;
+    width: 100px;
+    height: 25px;
+    background-color: rgb(86, 86, 212);
+    margin: 17px;
+    
+}
+.btn a {
+    color: white;
+    text-decoration: none;
+}
