@@ -1,39 +1,40 @@
 <div class="container">
     <fieldset>
         <legend>Ajouter un modele</legend>
-        <form action="">
+        <form  (ngSubmit)="addDesign()">
             <table>
                 <tr>
-                    <td><label for="">Ajouter un photo</label></td>
-                    <td><input class="form-control" type="file" name="photoAdd" id=""  [(ngModel)]="design.imgUrl"></td>
+                    <td><label for="">Ajouter une photo</label></td>
+                    <td><input class="form-control" type="text" name="imgUrl" id="" class="m-3"  [(ngModel)]="design.imgUrl"></td>
                 </tr>
 
                 <tr>
                     <td><label for="">Nom du modele</label></td>
-                    <td><input class="form-control" type="text" name="modeleName" id="" [(ngModel)]="design.label" ></td>
+                    <td><input class="form-control" type="text" name="label" id="" class="m-3" [(ngModel)]="design.label" ></td>
                 </tr>
                 <tr>
                     <td><label for="">Description</label></td>
-                    <td><textarea name="descripton" id="" cols="30" rows="10" [(ngModel)]="design.description"></textarea></td>
+                    <td><textarea name="description" id="" cols="30" rows="4" class="m-3" [(ngModel)]="design.description"></textarea></td>
                 </tr>
                 <tr>
                     <td><label for="">Category</label></td>
-                    <td><select name="" id="" name="category" [(ngModel)]="design.category">
+                    <td><select name="" id="" name="category" class="m-3" [(ngModel)]="design.category">
                             <option value="Enfant">Enfant</option>
                             <option value="Femme">Femme</option>
                             <option value="Homme">Homme</option>
                             <option value="Couple">Couple</option>
                             <option value="Famille">Famille</option>
+
                         </select>
                     </td>
                     <tr>
                         <td><label for="price">Le cout</label></td>
-                        <td><input class="form-control" type="number" name="price" id="" [(ngModel)]="design.label" ></td>
+                        <td><input class="form-control" type="number" name="price" id="" class="m-3" [(ngModel)]="design.price" ></td>
                     </tr>
 
                 <tr>
                     <td></td>
-                    <td><input type="reset" name="" id="" onclick="addDesign()" class="p-4"> <input type="submit" name="" id="" class="p-4">
+                    <td><input type="submit" name=""  value="Enregistrer" class="m-2 btn"> <input type="reset" name="" id="" class="m-2 btn bg-danger" value="Annuler">
                     </td>
                 </tr>
                
@@ -43,3 +44,6 @@
     </fieldset>
 
 </div>
+
+<!-- <label for="date-naiss" class="mt-3">Date de Naissance</label>
+<input type="date" name="burhDay" [(ngModel)]="user.burhDay" class="form-control"> -->

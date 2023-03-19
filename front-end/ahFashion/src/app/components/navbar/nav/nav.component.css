@@ -200,3 +200,22 @@
     font-weight: bold;
     text-shadow: gainsboro(23 5 -7);
 }
+.dashboard{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+  .fa-user{
+   
+    color: #D980FA;
+    font-size: 30px;
+   
+    
+}
+.login{ margin-right: 70px;}
+
+.login-text{
+    margin-left: 4px;
+    margin-bottom: 20px;
+    text-decoration: none;
+    font-size: 15px;
+}

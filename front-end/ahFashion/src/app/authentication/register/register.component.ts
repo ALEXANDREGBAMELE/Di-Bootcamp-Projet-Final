@@ -15,16 +15,17 @@ export class RegisterComponent{
   user: User = { 
     
     firstname: '',
-     lastname: '',
-       user_name: '',
+    lastname: '',
+    username: '',
     email: '',
     burhDay: '',
-      tall: '',
-     weight: '',
+    tall: '',
+    weight: '',
     address: '',
-     photo: '',
-     password : '',
-     confirmPassword : ''
+    photo: '',
+    password : '',
+    confirmPassword : '',
+    role : ''
    }
 
   constructor(private userService : FunctionService) { }

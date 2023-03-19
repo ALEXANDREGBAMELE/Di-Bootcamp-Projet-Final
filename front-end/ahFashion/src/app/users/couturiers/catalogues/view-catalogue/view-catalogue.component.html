@@ -1,0 +1,20 @@
+ 
+ <div class="row">
+<div class="container">
+  <div class="catalogue d-flex">
+    <div class="card m-5" style="width: 18rem;" *ngFor="let item of ListeDesign">
+      <div class="title p-4">{{item.label}}</div>
+      <img src="{{item.imgUrl}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <div class="description">
+          <div class="description">{{item.description}}</div>
+          <div class="price text-center"><h4>$.90</h4> </div>
+          <!-- btn est le button permettant d'ajouter une commande -->
+          <div class="btn"><a routerLink="/commandeform?id={{item.design_id}}">Commandez</a> </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div> 

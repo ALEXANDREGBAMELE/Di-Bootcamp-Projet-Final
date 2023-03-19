@@ -3,7 +3,7 @@ export interface User{
     user_id?: number,
     firstname: string,
     lastname: string,
-    user_name: string,
+    username: string,
     email: string,
     burhDay: string,
     tall: string,
@@ -12,4 +12,5 @@ export interface User{
     photo: string,
     password : string,
     confirmPassword : string
+    role:string;
 }

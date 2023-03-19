@@ -1,0 +1,41 @@
+
+
+<div class="title"><h1>Liste des utilisateurs</h1></div>
+
+<div class="container">
+  <table>
+    <thead class="bg-warning">
+        <th class="p-2 no"><h3>Id</h3></th>
+        <th><h3>Photo</h3></th>
+        <th><h3>Nom</h3></th>
+        <th><h3>Prenom</h3></th>
+        <th><h3>Email</h3></th>
+        <th><h3>Date de Naissance</h3></th>
+        <th><h3>Role</h3></th>
+        <th><h3>Taille</h3></th>
+        <th><h3>Poids</h3></th>
+        <th><h3>Adresse</h3></th>
+        <th><h3>Mot de passe</h3></th>
+       
+
+    <th colspan="2" class="text-center"> <h3>Action </h3></th>
+    </thead>
+    <tbody class="bg-light" *ngFor="let item of listeUser">
+        <tr>
+            <td class="p-2"><h4>{{item.user_id}}</h4></td>
+            <td class="p-2"><img src="" alt="Photo" height="100"></td>
+            <td>{{item.lastname}}</td>
+            <td>{{item.firstname }}</td>
+            <td>{{item.email}}</td>
+            <td>{{item.burhDay}}</td>
+            <td>{{item.role}}</td>
+            <td>{{item.tall}}</td>
+            <td>{{item.weight}}</td>
+            <td>{{item.address}}</td>
+            <td>{{item.password}}</td>
+            <td><button (click)="onDeleteUser(item.user_id)"  class="bg-danger btn">Click me</button></td>
+            
+        </tr>
+    </tbody>
+</table>
+</div>

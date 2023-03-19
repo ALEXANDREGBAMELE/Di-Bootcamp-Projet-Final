@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Design } from "../../../../models/design";
 import { FunctionService } from "../../../../services/api/function.service";
+import {  } from "module";
 
 @Component({
   selector: 'app-catalogue-add-form',
@@ -10,13 +11,13 @@ import { FunctionService } from "../../../../services/api/function.service";
 export class CatalogueAddFormComponent {
 
   design: Design = { 
-   
     design_id : 0,
     label: "",
     imgUrl : "",
     description : "",
     price : 0,
     category : "",
+
    }
 
   constructor(private designService : FunctionService) { }

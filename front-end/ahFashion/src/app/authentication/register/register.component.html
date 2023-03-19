@@ -1,52 +1,46 @@
 <!-- main app container -->
-        <form>
-            <table>
-                <tr>
-                    <td class="text-center"><label for="firstname">First Name</label></td>
-                    <td><input type="text" name="firstname" [(ngModel)]="user.firstname"  class="form-control"></td>
 
-                </tr>
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <div class="container">
+            <form>
+               <label for="firstname" class="mt-3">First Name</label>
+               <input type="text" name="firstname" [(ngModel)]="user.firstname"  class="form-control">
 
-                <tr>
-                    <td><label for="lastname">Last Name</label></td> 
-                    <td><input type="text" name="lastname" [(ngModel)]="user.lastname" class="form-control"></td>
-              
-                </tr>
+               <label for="lastname" class="mt-3">Last Name</label>
+               <input type="text" name="lastname" [(ngModel)]="user.lastname" class="form-control">
 
-                <tr>
-                    <td><label for="date-naiss">Date de Naissance</label></td> 
-                    <td><input type="text" name="date-naiss" [(ngModel)]="user.lastname" class="form-control"></td>
-              
-                </tr>
+               <label for="date-naiss" class="mt-3">Date de Naissance</label>
+               <input type="date" name="burhDay" [(ngModel)]="user.burhDay" class="form-control">
 
-                <tr>
-                   <td> <label for="email">Email</label></td>
-                   <td> <input type="text" name="email" [(ngModel)]="user.email" class="form-control"></td>
-                </tr>
-                <tr>
-                   <td> <label for="password">Password</label></td>
-                   <td> <input type="password" name="password" [(ngModel)]="user.password" class="form-control"></td>
-                   
-                </tr>
+               <label for="email" class="mt-3">Email</label>  
+               <input type="email" name="email" [(ngModel)]="user.email" class="form-control">
 
-                <tr>
-                   <td> <label for="confirmPassword">Confirm Password</label></td>
-                   <td> <input type="password" name="confirmPassword" [(ngModel)]="user.confirmPassword"  class="form-control"></td>
-              
-                </tr>
-                <tr>
-                    <td> <label for="role">Confirm Password</label></td>
-                    <select name="role" id="">
-                        <option value="">couturier</option>
-                        <option value="">Livreur </option>
-                        <option value="">Autre</option>
-                    </select>
-               
-                 </tr>
-                <tr>
-                   <td> <button type="submit" class="btn btn-primary mr-1" (click)="addUser()">Register</button></td>
-                   <td> <button class="btn btn-secondary" type="reset">Cancel</button></td>
-                </tr>
+               <label for="confirmPassword" class="mt-3">Nom d'utlisateur</label>
+               <input type="text" name="username" [(ngModel)]="user.username"  class="form-control"> 
 
-            </table>
-        </form>
+               <label for="password" class="mt-3">Password</label>
+               <input type="password" name="password" [(ngModel)]="user.password" class="form-control">
+
+               <label for="confirmPassword" class="mt-3">Confirm Password</label>
+               <input type="password" name="confirmPassword" [(ngModel)]="user.confirmPassword"  class="form-control"> 
+
+                <label for="role" class="mt-3">Role</label> <br>
+                <select name="role" id="" [(ngModel)]="user.role"  class="form-control">
+                    <option value="couturier">couturier</option>
+                    <option value="Livreur">Livreur </option>
+                    <option value="Autre">Autre</option>
+                </select> 
+                <br>
+                <button type="submit" class="btn btn-primary mr-1" (click)="addUser()">Register</button>
+                <button class="btn btn-secondary" type="reset">Cancel</button>
+            </form>
+        </div>
+    </div>
+    <div class="col-md-4"></div>
+</div>
+
+
+
+       

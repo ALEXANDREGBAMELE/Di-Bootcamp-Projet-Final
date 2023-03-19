@@ -1,22 +1,29 @@
-<div class="row">
-<div class="container">
-  <div class="catalogue d-flex">
-    <div class="card m-5" style="width: 18rem;" *ngFor="let item of ListeDesign">
-      <div class="title p-4">{{item.label}}</div>
-      <img src="{{item.imgUrl}}" class="card-img-top" alt="...">
-      <div class="card-body">
-        <div class="description">
-          <div class="description">{{item.description}}</div>
-          <div class="price text-center"><h4>$.90</h4> </div>
-          <!-- btn est le button permettant d'ajouter une commande -->
-          <div class="btn"><a routerLink="/commandeform?id={{item.design_id}}">Commandez</a> </div>
 
-        </div>
-      </div>
-    </div>
+  <div class="add">
+    <a routerLink="/dashboard/catalogueformadd"><input type="button" name="" id="" class="btn" value="Ajouter"></a>
   </div>
-</div>
-</div>
 
-
-  <div class="btn"><a routerLink="add-catalogue">Add</a></div>
+<div class="container">
+  <table>
+    <thead class="bg-warning">
+        <th class="p-2 no"><h3>No</h3></th>
+        <th><h3>Image</h3></th>
+        <th><h3>Libelle</h3></th>
+        <th><h3>Description</h3></th>
+        <th><h3>Prix</h3></th>
+        <th colspan="2" class="text-center"> <h3>Action </h3></th>
+    </thead>
+    <tbody class="bg-light" *ngFor="let item of ListeDesign">
+        <tr>
+            <td class="p-2"><h4>{{item.design_id}}</h4></td>
+            <td class="p-2"><img src="{{item.imgUrl}}" alt="{{item.label}}" height="100"></td>
+            <td><h4>{{item.label}}</h4></td>
+            <td><h5>{{item.description}}</h5></td>
+            <td></td>
+            <td><input type="button" value="Modifier" class=" btn"></td>
+            <td><input type="button" value="Supprimer" class="bg-danger btn"></td>
+        </tr>
+    </tbody>
+</table>
+</div>
+  
