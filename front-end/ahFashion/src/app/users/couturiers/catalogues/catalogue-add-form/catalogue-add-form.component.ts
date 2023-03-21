@@ -3,6 +3,9 @@ import { Design } from "../../../../models/design";
 import { FunctionService } from "../../../../services/api/function.service";
 import {  } from "module";
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+
 @Component({
   selector: 'app-catalogue-add-form',
   templateUrl: './catalogue-add-form.component.html',

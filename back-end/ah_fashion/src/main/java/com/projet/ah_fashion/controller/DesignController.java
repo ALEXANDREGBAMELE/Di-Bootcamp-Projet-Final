@@ -34,9 +34,9 @@ public class DesignController {
 
         return designService.delete(design_id);
     }
-    @GetMapping("/design/category/{category}")
-    public Optional<List<Design>> readByCategory(@PathVariable("category") String category){
-        return designService.readByCategory(category);
-    }
+//    @GetMapping("/design/category/{category}")
+//    public Optional<List<Design>> readByCategory(@PathVariable("category") String category){
+//        return designService.readByCategory(category);
+//    }
 
 }

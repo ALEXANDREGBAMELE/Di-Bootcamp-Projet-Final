@@ -36,10 +36,10 @@ h6{
 }
 .btn{
     background-color: rgb(162, 84, 236);
-   
     width: 200px !important;
     margin: 10px 15px 10px 15px;
 }
+
 .btn a{
     color: white;
     font-weight: bold;

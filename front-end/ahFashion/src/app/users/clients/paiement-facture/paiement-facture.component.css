@@ -1,0 +1,12 @@
+
+
+.orange-card, .wave-card, .paypal-card, .visa-card , .orange-card img, .wave-card img, .paypal-card img ,.visa-card img{
+    width: 200px !important;
+    height: 150px !important;
+}
+.d-flex {
+    display: flex;
+}
+.card{
+    margin: 15px;
+}

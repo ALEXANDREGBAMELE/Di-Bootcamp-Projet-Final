@@ -17,6 +17,7 @@ import { ContactComponent } from './components/contacts/contact/contact.componen
 import { ListeHistoriqueCouturierComponent } from './users/couturiers/historiques/liste-historique-couturier/liste-historique-couturier.component';
 import { DashboardCouturierComponent } from './users/couturiers/dashboard-couturier/dashboard-couturier.component';
 import { DashboardAdminComponent } from './admin/dashboard-admin/dashboard-admin.component';
+import { PaiementFactureComponent } from './users/clients/paiement-facture/paiement-facture.component';
 const routes: Routes = [
 {
   path : 'view',
@@ -77,6 +78,10 @@ const routes: Routes = [
 {
   path : 'historiquecouturier',
   component : ListeHistoriqueCouturierComponent,
+},
+{
+  path : 'paiement',
+  component : PaiementFactureComponent,
 },
 
 

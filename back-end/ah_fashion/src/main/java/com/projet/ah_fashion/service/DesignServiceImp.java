@@ -34,6 +34,7 @@ public class DesignServiceImp implements DesignService {
                     design1.setImgUrl(design.getImgUrl());
                     design1.setPrice(design.getPrice());
                     design1.setDescription(design.getDescription());
+                    design1.setCategory(design.getCategory());
                     return designRepository.save(design1);
                 }).orElseThrow(
                         () -> new RuntimeException("Objet not fund !")
@@ -46,8 +47,8 @@ public class DesignServiceImp implements DesignService {
         return "Deleted is successfully";
     }
 
-    @Override
-    public Optional<List<Design>> readByCategory(String category) {
-        return designRepository.findDesignByCategory(category);
-    }
+//    @Override
+//    public Optional<List<Design>> readByCategory(String category) {
+//        return designRepository.findDesignByCategory(category);
+//    }
 }

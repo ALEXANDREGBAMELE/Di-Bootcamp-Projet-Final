@@ -113,6 +113,7 @@ import { TissuViewComponent } from './pages/tissu-view/tissu-view.component';
             PaiementFactureComponent,
             PanierComponent,
             TissuViewComponent,
+
             
         
   ],
@@ -125,7 +126,8 @@ import { TissuViewComponent } from './pages/tissu-view/tissu-view.component';
     RouteLivreurModule,
     RouteClientModule,
     CouturierRoutingModule,
-    AdminRoutingModule
+    AdminRoutingModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

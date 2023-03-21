@@ -25,7 +25,7 @@ public class Design {
     @OneToMany(mappedBy = "design",cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Order> order = new ArrayList<>();
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn (name = "designCat_id" , referencedColumnName = "designCat_id")
-    private DesignCategory designCategory;
+//    @ManyToOne(fetch = FetchType.LAZY)
+//    @JoinColumn (name = "designCat_id" , referencedColumnName = "designCat_id")
+//    private DesignCategory designCategory;
 }

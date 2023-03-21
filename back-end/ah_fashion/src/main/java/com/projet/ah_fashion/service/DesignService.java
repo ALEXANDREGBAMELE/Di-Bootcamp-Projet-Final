@@ -12,5 +12,5 @@ public interface DesignService {
     Design update(Design design);
     String delete(Long design_id);
 //    une methode qui pointera sa requette sur les category
-    Optional<List<Design>> readByCategory(String category);
+//    Optional<List<Design>> readByCategory(String category);
 }
