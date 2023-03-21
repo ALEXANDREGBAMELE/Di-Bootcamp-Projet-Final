@@ -16,7 +16,7 @@ import { TissuListeComponent } from '../tissu-liste/tissu-liste.component';
 const routes: Routes = [
 
   {
-    path: 'dashboardadmin',
+    path: '',
     component: DashboardAdminComponent,
     children: [
       
@@ -68,7 +68,7 @@ const routes: Routes = [
                   {
                     path : 'listecouturier',
                     component : ListeCouturierComponent
-                  }
+                  },
               
               ]
             }

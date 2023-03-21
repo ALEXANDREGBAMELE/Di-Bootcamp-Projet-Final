@@ -42,7 +42,7 @@ const routes: Routes = [
                     component : ListLivreurDisponibleComponent,
                 },
                 {
-                  path : 'listereclamation',
+                  path : '',
                   component : ListeReclamationComponent,
                 },
                 {

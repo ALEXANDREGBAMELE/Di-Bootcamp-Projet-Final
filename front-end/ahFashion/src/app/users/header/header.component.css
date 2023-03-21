@@ -1,22 +1,51 @@
+/* 
+*{
+  margin: 0 !important;
+  padding: 0 !important;
+} */
 
-  
-      .info-perso{
-        border-bottom: violet 5px solid !important;
-      }
-
-      .bg-body-tertiary{
-        background-color: blueviolet !important;
-      }
+/* Navbar style */
+.navbar{
+  border-bottom: 2px solid #18A0FB;
+}
+.nav-link{
+  color: #D980FA !important ;
+  font-size: 28px !important;
+  font-weight: bold !important;
+}
 
       /* style du sidebar */
-      .sidebar{
-        background-color: rgb(109, 109, 248) !important;
-        width: 1030px;
-      }
+     
       .logo{
-        margin-left:-260px;
-      } 
-
-      nav{
-        background-color:  rgb(162, 84, 236) !important;
+        margin-left:-350px;
+        
+      }
+    .accueil{
+        margin-left: -250px;
+        margin-right: 40px;
     }
+
+    .accueil a{
+      color: #D980FA !important ;
+      font-size: 28px !important;
+      font-weight: bold !important;
+      border: 1px solid rgb(46, 44, 44);
+      border-radius: 15px;
+      padding-top:  10px;
+     
+  }
+
+  .accueil a{
+    color: #D980FA !important ;
+    font-size: 28px !important;
+    font-weight: bold !important;
+    border: 1px solid rgb(46, 44, 44);
+    border-radius: 15px;
+    padding-top:  10px;
+   
+}
+  
+  .accueil :hover{
+    background-color: #c4d3df;
+  }
+  

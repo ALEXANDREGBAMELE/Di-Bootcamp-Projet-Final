@@ -18,6 +18,10 @@ import { ListeHistoriqueCouturierComponent } from './users/couturiers/historique
 import { DashboardCouturierComponent } from './users/couturiers/dashboard-couturier/dashboard-couturier.component';
 import { DashboardAdminComponent } from './admin/dashboard-admin/dashboard-admin.component';
 import { PaiementFactureComponent } from './users/clients/paiement-facture/paiement-facture.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { PanierComponent } from './users/clients/panier/panier.component';
+import { AddCommandeComponent } from './users/clients/add-commande/add-commande.component';
+import { FactureComponent } from './shared/facture/facture.component';
 const routes: Routes = [
 {
   path : 'view',
@@ -63,8 +67,8 @@ const routes: Routes = [
 },
 
 {
-  path : 'dashboardadmin',
-  component : DashboardAdminComponent,
+  path : 'dashboardadmin', loadChildren : () =>
+  import ('./admin/routes/route-admin.module').then((m) => m.AdminRoutingModule)
 },
 
 {
@@ -84,14 +88,25 @@ const routes: Routes = [
   component : PaiementFactureComponent,
 },
 
+{
+  path : 'panier',
+  component : PanierComponent,
+}
+,
+{
+  path : 'addcommande/:id',
+  component : AddCommandeComponent,
+},
+{
+  path : 'facture',
+  component : FactureComponent,
+},
 
+{
+  path: '**',
+  component : NotFoundComponent,
 
-// les routes enfante du user/id
-// {
-//   path: '**',
-//   redirectTo: 'dashbord',
-//   pathMatch: 'full',
-// },
+},
 
 
   

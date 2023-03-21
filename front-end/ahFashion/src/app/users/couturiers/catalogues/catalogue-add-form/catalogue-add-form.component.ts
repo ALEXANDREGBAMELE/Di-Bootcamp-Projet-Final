@@ -28,11 +28,17 @@ export class CatalogueAddFormComponent {
       this.designService.createDesign(this.design).subscribe({
         next : data=>{
           console.log(data);
+          
           alert('modele enregistre avec succes');
+          // scope.location = function(){
+          //   var url = "https://www.delftstack.com/";
+          //   $window.location.href = url;
+          // }
          
         },
         error : (err) =>{
           console.log(err);
+          
         }
       
       });

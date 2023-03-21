@@ -1,18 +1,7 @@
-.sidenav{
-    background-color: rgb(12, 180, 241);;
-    height: 100%;
-    overflow: scroll;
-    position: fixed;
-    width: auto;
-}
 
 .info-perso{
-    margin-bottom: 400px;
-    position: fixed;
-    background-color: rgb(194, 219, 244);
-    width: 228px;
-    height: 220px;
-    padding-top: 10px;
+  
+    background-color: #bc07fe;
   
     border-radius:  0px 0px 10px  10px;
     box-shadow: 0px 0px 2px  2px rgb(102, 105, 106);
@@ -22,31 +11,45 @@
 
 p a img{
     border-radius: 50%;
-    height: 100px;
-    width: 100px;
+    height: 50px;
+    width: 50px;
 }
 p a {
     color: white;
     text-align: center;
 }
-h6{
-    color:  rgb(162, 84, 236);
-    text-align: center; 
-    font-weight: bold;
-}
+
 .btn{
-    background-color: rgb(162, 84, 236);
-    width: 200px !important;
-    margin: 10px 15px 10px 15px;
+  
+    width: 150px;
+    border: 1px solid rgb(45, 42, 42);
+    margin-top: 10px;   
+} 
+
+.btn :hover {
+    background-color: rgb(191, 194, 196);
 }
 
 .btn a{
-    color: white;
+    
+    color: #D980FA !important ;
     font-weight: bold;
     font-size: 15px;
     text-decoration: none;
 }
-.link-btn{
-    /* position: relative; */
-    margin-top: 220px;
+
+.card{
+    padding: 0px;
+    height: 6 00px;
 }
+
+/* .btn a{
+    color: #D980FA !important ;
+    font-size: 28px !important;
+    font-weight: bold !important;
+    border: 1px solid rgb(46, 44, 44);
+    border-radius: 15px;
+    padding-top:  10px;
+    width: 200px;
+   
+} */

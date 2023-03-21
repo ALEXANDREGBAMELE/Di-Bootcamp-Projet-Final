@@ -36,7 +36,6 @@ import { LoginComponent } from './authentication/login/login.component';
 import { UserListeComponent } from './admin/user-liste/user-liste.component';
 import { DashbordClientComponent } from './users/clients/dashbord-client/dashbord-client.component';
 import { SidenavClentComponent } from './users/clients/sidenav-clent/sidenav-clent.component';
-import { NavbarClientComponent } from './users/clients/navbar-client/navbar-client.component';
 import { ListeCommandeCourantComponent } from './users/clients/liste-commande-courant/liste-commande-courant.component';
 import { ListeHistoriqueChezLivreurComponent } from './users/livreurs/liste-historique-chez-livreur/liste-historique-chez-livreur.component';
 import { NavbarLivreurComponent } from './users/livreurs/navbar-livreur/navbar-livreur.component';
@@ -57,6 +56,8 @@ import { ListeFactureComponent } from './admin/liste-facture/liste-facture.compo
 import { PaiementFactureComponent } from './users/clients/paiement-facture/paiement-facture.component';
 import { PanierComponent } from './users/clients/panier/panier.component';
 import { TissuViewComponent } from './pages/tissu-view/tissu-view.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { AddCommandeComponent } from './users/clients/add-commande/add-commande.component';
 
 
 @NgModule({
@@ -94,7 +95,6 @@ import { TissuViewComponent } from './pages/tissu-view/tissu-view.component';
             UserListeComponent,
             DashbordClientComponent,
             SidenavClentComponent,
-            NavbarClientComponent,
             ListeCommandeCourantComponent,
             ListeHistoriqueChezLivreurComponent,
             NavbarLivreurComponent,
@@ -113,6 +113,8 @@ import { TissuViewComponent } from './pages/tissu-view/tissu-view.component';
             PaiementFactureComponent,
             PanierComponent,
             TissuViewComponent,
+            NotFoundComponent,
+            AddCommandeComponent,
 
             
         

@@ -63,6 +63,12 @@ export class FunctionService {
      
     return this.httpService.get("/api/design");
    }
+
+   getDesignById(design_id : number) {
+    //  console.log('dsds');
+     
+    return this.httpService.get(`api/design/${design_id}`);
+   }
  
    deleteDesign(design_id : string) {
      return this.httpService.delete(`api/design/${design_id}`);
