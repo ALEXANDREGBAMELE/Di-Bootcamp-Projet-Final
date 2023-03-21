@@ -7,21 +7,22 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
+@CrossOrigin(allowedHeaders = "*",origins = "*")
 
 @RestController
-@RequestMapping("/claim")
+@RequestMapping("/api")
 @AllArgsConstructor
 public class ClaimController {
     private ClaimService claimService;
-    @PostMapping("/create")
+    @PostMapping("/claim")
     public Claim create( @RequestBody Claim claim){return claimService.create(claim);}
-    @GetMapping("/read")
+    @GetMapping("/claim")
     public List<Claim> read()
     {return claimService.read();}
-    @GetMapping("/read/{id}")
-    public Optional<Claim> readById(@PathVariable("id") Long id){return claimService.readById(id);}
-    @PutMapping("/update")
+    @GetMapping("/claim/{claim_id}")
+    public Optional<Claim> readById(@PathVariable("claim_id") Long claim_id){return claimService.readById(claim_id);}
+    @PutMapping("/claim")
     public Claim update( @RequestBody Claim claim){return claimService.update(claim);}
-    @DeleteMapping("/delete/{id}")
-    public String delete( @PathVariable("id") Long id){return claimService.delete(id);}
+    @DeleteMapping("/claim/{claim_id}")
+    public String delete( @PathVariable("claim_id") Long claim_id){return claimService.delete(claim_id);}
 }

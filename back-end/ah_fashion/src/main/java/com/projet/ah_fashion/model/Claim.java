@@ -17,15 +17,15 @@ import java.util.Date;
 public class Claim {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private long claim_id;
     private String label;
     private String description;
     private Date date;
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id", referencedColumnName = "id")
+    @JoinColumn(name = "user_id")
     private User user;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "order_id", referencedColumnName = "id")
+    @JoinColumn(name = "order_id",referencedColumnName = "order_id")
     private Order order;
 }

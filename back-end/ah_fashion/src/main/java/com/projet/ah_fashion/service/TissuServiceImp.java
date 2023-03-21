@@ -23,13 +23,13 @@ public class TissuServiceImp implements TissuService{
     }
 
     @Override
-    public Optional<Tissu> readById(Long id) {
-        return tissuRepository.findById(id);
+    public Optional<Tissu> readById(Long tissu_id) {
+        return tissuRepository.findById(tissu_id);
     }
 
     @Override
     public Tissu update(Tissu tissu) {
-        return tissuRepository.findById(tissu.getId())
+        return tissuRepository.findById(tissu.getTissu_id())
                 .map(
                         tissu1 -> {
                             tissu1.setLabel(tissu.getLabel());
@@ -43,8 +43,8 @@ public class TissuServiceImp implements TissuService{
     }
 
     @Override
-    public String delete(Long id) {
-        tissuRepository.deleteById(id);
+    public String delete(Long tissu_id) {
+        tissuRepository.deleteById(tissu_id);
         return "deleted succefuly";
     }
 }

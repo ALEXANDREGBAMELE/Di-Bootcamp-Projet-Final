@@ -7,30 +7,30 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
-
+@CrossOrigin(allowedHeaders = "*",origins = "*")
 @RestController
-@RequestMapping("/delivery")
+@RequestMapping("/api")
 @AllArgsConstructor
 public class DeliveryController {
     private DeliveryService deliveryService;
-    @PostMapping("/create")
+    @PostMapping("/delivery")
     public Delivery create(@RequestBody Delivery delivery){
         return deliveryService.create(delivery);
     }
-    @GetMapping("/read")
+    @GetMapping("/delivery")
     public List<Delivery> read(){
         return deliveryService.read();
     }
-    @GetMapping("/read/{id}")
-    public Optional<Delivery> readById( @PathVariable("id") Long id){
+    @GetMapping("/delivery/{delivery_id}")
+    public Optional<Delivery> readById( @PathVariable("delivery_id") Long id){
         return deliveryService.readById(id);
     }
     public Delivery update(Delivery delivery){
         return deliveryService.update(delivery);
     }
-    @DeleteMapping("/delete")
-    public String delete(Long id){
-        return deliveryService.delete(id);
+    @DeleteMapping("/delivery")
+    public String delete(Long delivery_id){
+        return deliveryService.delete(delivery_id);
     }
 
 }

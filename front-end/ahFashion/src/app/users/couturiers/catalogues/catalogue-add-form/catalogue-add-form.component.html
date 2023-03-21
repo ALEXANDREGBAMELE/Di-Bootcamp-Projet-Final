@@ -1,24 +1,24 @@
 <div class="container">
     <fieldset>
         <legend>Ajouter un modele</legend>
-        <form  (ngSubmit)="addDesign()">
+        <form (ngSubmit)="addDesign()">
             <table>
                 <tr>
                     <td><label for="">Ajouter une photo</label></td>
-                    <td><input class="form-control" type="text" name="imgUrl" id="" class="m-3"  [(ngModel)]="design.imgUrl"></td>
+                    <td><input class="form-control" type="text" name="imgUrl" id="imgUrl" class="m-3"  [(ngModel)]="design.imgUrl" required></td>
                 </tr>
 
                 <tr>
                     <td><label for="">Nom du modele</label></td>
-                    <td><input class="form-control" type="text" name="label" id="" class="m-3" [(ngModel)]="design.label" ></td>
+                    <td><input class="form-control" type="text" name="label" id="label" class="m-3" [(ngModel)]="design.label" required ></td>
                 </tr>
                 <tr>
                     <td><label for="">Description</label></td>
-                    <td><textarea name="description" id="" cols="30" rows="4" class="m-3" [(ngModel)]="design.description"></textarea></td>
+                    <td><textarea name="description" id="description" cols="30" rows="4" class="m-3" [(ngModel)]="design.description" required></textarea></td>
                 </tr>
                 <tr>
                     <td><label for="">Category</label></td>
-                    <td><select name="" id="" name="category" class="m-3" [(ngModel)]="design.category">
+                    <td><select name="" id="category" name="category" class="m-3" [(ngModel)]="design.category" required>
                             <option value="Enfant">Enfant</option>
                             <option value="Femme">Femme</option>
                             <option value="Homme">Homme</option>

@@ -5,8 +5,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.sql.Date;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -15,16 +15,12 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class User {
-//   a enum of Users role
-    enum Role {
-        CUSTOMER,TAILOR,DELIVERYPERSON
-    }
 
     //=============== Attributs =====================
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
 //  Information user
-    private Long id;
+    private Long user_id;
     private String firstname;
     private String lastname;
     private String username;
@@ -37,7 +33,8 @@ public class User {
 //    Login
     private int password;
     private int confirmPassword;
-//    relation oarent vers fils : De User vers Facture
+    private String role;
+  //  relation oarent vers fils : De User vers Facture
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Claim> claim = new ArrayList<>();
 //    relation oarent vers fils : De User vers Claim

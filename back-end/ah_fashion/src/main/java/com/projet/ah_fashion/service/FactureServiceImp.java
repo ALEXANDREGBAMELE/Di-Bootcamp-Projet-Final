@@ -24,13 +24,13 @@ public class FactureServiceImp implements FactureService{
     }
 
     @Override
-    public Optional<Facture> readById(Long id) {
-        return factureRepository.findById(id);
+    public Optional<Facture> readById(Long facture_id) {
+        return factureRepository.findById(facture_id);
     }
 
     @Override
     public Facture update(Facture facture) {
-        return factureRepository.findById(facture.getId()) .map(
+        return factureRepository.findById(facture.getFacture_id()) .map(
                 facture1 -> {
                     facture1.setLabel(facture.getLabel());
                     facture1.setInvoiceAmount(facture.getInvoiceAmount());
@@ -41,8 +41,8 @@ public class FactureServiceImp implements FactureService{
     }
 
     @Override
-    public String delete(Long id) {
-        factureRepository.deleteById(id);
+    public String delete(Long facture_id) {
+        factureRepository.deleteById(facture_id);
         return "Deleted is successfully";
     }
 }

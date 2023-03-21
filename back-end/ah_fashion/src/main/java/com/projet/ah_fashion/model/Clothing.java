@@ -23,6 +23,7 @@ public class Clothing {
     private String descriptionClothing;
     @Column(length = 10)
     private double price;
-    @ManyToMany (mappedBy = "clothingset")
-    private Set<Order> assignedOrder = new HashSet<>();
+    //=============== Relation ManyToMany=====================
+//    @ManyToMany (mappedBy = "clothingset")
+//    private Set<Order> assignedOrder = new HashSet<>();
 }

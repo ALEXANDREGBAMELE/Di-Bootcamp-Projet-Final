@@ -10,7 +10,7 @@ import java.util.Optional;
 public interface TissuService {
     Tissu create(Tissu tissu);
     List<Tissu> read();
-    Optional<Tissu> readById(Long id);
+    Optional<Tissu> readById(Long tissu_id);
     Tissu update(Tissu tissu);
-    String delete(Long id);
+    String delete(Long tissu_id);
 }

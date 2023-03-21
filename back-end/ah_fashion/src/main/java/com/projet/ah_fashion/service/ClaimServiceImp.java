@@ -22,13 +22,13 @@ public class ClaimServiceImp implements ClaimService{
     }
 
     @Override
-    public Optional<Claim> readById(Long id) {
-        return claimRepository.findById(id);
+    public Optional<Claim> readById(Long clothing_id) {
+        return claimRepository.findById(clothing_id);
     }
 
     @Override
     public Claim update(Claim claim) {
-        return claimRepository.findById(claim.getId()) .map(
+        return claimRepository.findById(claim.getClaim_id()) .map(
                 claim1 -> {
                     claim1.setLabel(claim.getLabel());
                     claim1.setDescription(claim.getDescription());
@@ -39,8 +39,8 @@ public class ClaimServiceImp implements ClaimService{
     }
 
     @Override
-    public String delete(Long id) {
-        claimRepository.deleteById(id);
+    public String delete(Long clothing_id) {
+        claimRepository.deleteById(clothing_id);
         return "Deleted is successfully";
     }
 }

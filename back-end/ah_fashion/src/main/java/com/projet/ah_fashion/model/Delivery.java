@@ -1,10 +1,12 @@
 package com.projet.ah_fashion.model;
 
+import com.fasterxml.jackson.annotation.JsonIdentityReference;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -14,11 +16,11 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class Delivery {
+public class Delivery implements Serializable {
     //=============== Attributs =====================
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private long delivery_id;
     private double price;
     private Date date;
 
@@ -28,7 +30,8 @@ public class Delivery {
 
     //=============== Relation ManyToOne=====================
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "order_id" , referencedColumnName = "id")
-    private Order oder;
+    //@JoinColumn(name = "order_id", referencedColumnName = "order_id")
+    @JsonIdentityReference(alwaysAsId = true)
+    private Order order;
 
 }

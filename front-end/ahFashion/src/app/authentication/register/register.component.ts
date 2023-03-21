@@ -29,9 +29,12 @@ export class RegisterComponent{
    }
 
   constructor(private userService : FunctionService) { }
+  
 
   addUser() {
-    
+    if(!this.user){
+    alert("les champs sont vides");
+    }
       this.userService.createUser(this.user).subscribe({
         next : data=>{
           console.log(data);

@@ -49,47 +49,12 @@
 
 
 
-.container .footer{
-    height: 250px;
-    border: 2px solid red;
-    margin-top: 15px;
-    background-color: rgb(14, 13, 15);
-}
-
-.col-md-2 .card, .col-md-2 .card .model img {
-    height: 150px !important;
-}
-
 .footer{
     background-color: #D980FA;
 }
 
-/* style inscription */
-.container .bg-warning{
-    height: 500px;
-    width: 800px;
-}
-/* .mll-5{
-    margin-left: 350px;
-} */
-.row .col-md-4 .card, .row .col-md-4 .card .model img{
-    width: 300px !important;
-    height: 300px !important;
-}
-.sc-1 .card, .sc .card img {
-    width: 100% !important;
-    /* height: 100px!important; */
-    
-}
 
 
-.telcom .card{
-    background-color: #18A0FB;
-   
-}
-.m-row{
-    background-color: #18A0FB;
-}
 
 .title{
     border-bottom: #18A0FB solid 5px;
@@ -117,18 +82,32 @@
     color: #D980FA !important ;
     font-size: 28px !important;
     font-weight: bold !important;
+    border: 1px solid rgb(46, 44, 44);
+    border-radius: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.nav-link :hover{
+    background-color: #18A0FB;
+}
+
+ul li a{
+    text-decoration: none;
+}
+ul li :hover{
+    background-color: #c4d3df;
+}
+
+/* =========logo style ============= */
+
+#navbarSupportedContent img{
+    margin-right: 30px;
+    width: 60px;
 }
 
 /* carousel style */
-.carousel-item{
-    /* width: 1000px !important; */
-    /* height: 500px !important; */
-    /* border: 2px solid red;
-    margin-left: 130px;
-    margin-top: 15px; */
-
-
-}
 
 .col-md-3 .card img{
     /* width: 100%; */
@@ -143,9 +122,29 @@
     background-color: #D980FA;
 }
 
+/* ================les icons ============================
+    
+*/
+.fa-shopping-cart{
+    font-size: 30px;
+    margin-top: 25px;
+    margin-left: 10px;
+}
+
+.fa-user{
+   
+    color: #D980FA;
+    font-size: 35px;  
+}
+.login{ margin-right: 10px;}
 
 
 
+/* ==========Formulaire de recherche ============================ */
+
+.forminput{
+    margin-top: 10px;
+}
 
 
 
@@ -204,14 +203,7 @@
     margin-left: 20px;
     margin-right: 20px;
 }
-  .fa-user{
-   
-    color: #D980FA;
-    font-size: 30px;
-   
-    
-}
-.login{ margin-right: 70px;}
+  
 
 .login-text{
     margin-left: 4px;

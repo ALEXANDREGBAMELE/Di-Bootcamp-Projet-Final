@@ -8,7 +8,7 @@ import java.util.Optional;
 public interface ClaimService {
     Claim create(Claim claim);
     List<Claim> read();
-    Optional<Claim> readById(Long id);
+    Optional<Claim> readById(Long claim_id);
     Claim update(Claim claim);
-    String delete(Long id);
+    String delete(Long claim_id);
 }

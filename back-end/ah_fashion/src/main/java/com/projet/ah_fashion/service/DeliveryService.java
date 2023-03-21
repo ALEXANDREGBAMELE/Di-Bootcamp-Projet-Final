@@ -8,7 +8,7 @@ import java.util.Optional;
 public interface DeliveryService {
     Delivery create(Delivery delivery);
     List<Delivery> read();
-    Optional<Delivery> readById(Long id);
+    Optional<Delivery> readById(Long delivery_id);
     Delivery update(Delivery delivery);
-    String delete(Long id);
+    String delete(Long delivery_id);
 }

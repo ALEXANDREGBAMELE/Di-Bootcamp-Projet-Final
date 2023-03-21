@@ -6,7 +6,6 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.Date;
-import java.util.List;
 
 @Entity
 @Table(name = "HISTORICAL")
@@ -18,18 +17,18 @@ public class Historical {
     //=============== Attributs =====================
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private long historical_id;
     private Date date;
 
     //=============== Relation OneToMany=====================
 
     //=============== Relation ManyToOne=====================
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id",referencedColumnName = "id")
+    @JoinColumn(name = "user_id", referencedColumnName = "user_id")
     private User user;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "order_id", referencedColumnName = "id")
+    @JoinColumn(name = "order_id", referencedColumnName = "order_id")
     private Order order;
 
 }

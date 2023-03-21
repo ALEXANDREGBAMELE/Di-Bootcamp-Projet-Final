@@ -8,7 +8,9 @@ import java.util.Optional;
 public interface DesignService {
     Design create(Design design);
     List<Design> read();
-    Optional<Design> readById(Long id);
+    Optional<Design> readById(Long design_id);
     Design update(Design design);
-    String delete(Long id);
+    String delete(Long design_id);
+//    une methode qui pointera sa requette sur les category
+    Optional<List<Design>> readByCategory(String category);
 }

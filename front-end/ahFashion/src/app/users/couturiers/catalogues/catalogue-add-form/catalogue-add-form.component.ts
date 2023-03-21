@@ -10,20 +10,18 @@ import {  } from "module";
 })
 export class CatalogueAddFormComponent {
 
-  design: Design = { 
-    design_id : 0,
+  design: Design = {
     label: "",
-    imgUrl : "",
-    description : "",
-    price : 0,
-    category : "",
-
-   }
+    imgUrl: "",
+    description: "",
+    price: 0,
+    category: "",
+    design_id: 0
+  }
 
   constructor(private designService : FunctionService) { }
 
   addDesign() {
-    
       this.designService.createDesign(this.design).subscribe({
         next : data=>{
           console.log(data);

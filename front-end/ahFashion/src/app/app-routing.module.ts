@@ -10,15 +10,14 @@ import { ViewComponent } from './pages/view/view/view.component';
 import { CatalogueComponent } from './users/couturiers/catalogues/catalogue/catalogue.component';
 import { ViewCatalogueComponent } from './users/couturiers/catalogues/view-catalogue/view-catalogue.component';
 import { ListCommandeCouturierComponent } from './users/couturiers/commandes/list-commande-couturier/list-commande-couturier.component';
-import { DashbordComponent } from './users/Dashbord/dashbord.component';
 import { DashboardLivreurComponent } from './users/livreurs/dashboard-livreur/dashboard-livreur.component';
 import { DashbordClientComponent } from './users/clients/dashbord-client/dashbord-client.component';
+import { DesignComponent } from './components/design/design.component';
+import { ContactComponent } from './components/contacts/contact/contact.component';
+import { ListeHistoriqueCouturierComponent } from './users/couturiers/historiques/liste-historique-couturier/liste-historique-couturier.component';
+import { DashboardCouturierComponent } from './users/couturiers/dashboard-couturier/dashboard-couturier.component';
+import { DashboardAdminComponent } from './admin/dashboard-admin/dashboard-admin.component';
 const routes: Routes = [
-
- {
-  path :'dashbord', component : DashbordComponent,
- 
- },
 {
   path : 'view',
   component : ViewComponent,
@@ -52,11 +51,34 @@ const routes: Routes = [
 {
   path : 'dashbordlivreur',
   component : DashboardLivreurComponent,
+},
+{
+  path : 'dashboardclient',
+  component : DashbordClientComponent,
+},
+{
+  path : 'dashboarcouturier',
+  component : DashboardCouturierComponent,
+},
 
-  children : [
+{
+  path : 'dashboardadmin',
+  component : DashboardAdminComponent,
+},
 
-  ]
-}
+{
+  path : 'design',
+  component : DesignComponent,
+},
+{
+  path : 'contact',
+  component : ContactComponent,
+},
+{
+  path : 'historiquecouturier',
+  component : ListeHistoriqueCouturierComponent,
+},
+
 
 
 // les routes enfante du user/id

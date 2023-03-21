@@ -1,0 +1,46 @@
+
+
+.button-group .btn1{
+    margin-right:100px  !important;
+    margin-left:100px  !important;
+    
+}
+.button-group .btn1 input{
+    width: 200px;
+    height: 25px;
+    border-radius: 15px;
+}
+
+.button-group .btn2 input{
+    width: 200px;
+    height: 25px;
+    border-radius: 15px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    
+}
+.button-group .bg-primary{
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.button-group .bg-warning{
+    background-color: #ff0101 !important;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+   
+}
+
+:root{
+    --main-color : #D980FA;
+}
+
+.container {
+
+   background-color:  #D980FA;
+
+    /* background-color: var(--main-color) !important; */
+}

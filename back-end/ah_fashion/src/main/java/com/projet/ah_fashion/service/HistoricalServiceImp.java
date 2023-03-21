@@ -1,7 +1,6 @@
 package com.projet.ah_fashion.service;
 
 import com.projet.ah_fashion.model.Historical;
-import com.projet.ah_fashion.model.Historical;
 import com.projet.ah_fashion.repository.HistoricalRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -23,13 +22,13 @@ public class HistoricalServiceImp implements HistoricalService{
     }
 
     @Override
-    public Optional<Historical> readById(Long id) {
-        return historicalRepository.findById(id);
+    public Optional<Historical> readById(Long historical_id) {
+        return historicalRepository.findById(historical_id);
     }
 
     @Override
     public Historical update(Historical historical) {
-        return historicalRepository.findById(historical.getId()) .map(
+        return historicalRepository.findById(historical.getHistorical_id()) .map(
                 historical1 -> {
                     historical1.setDate(historical.getDate());
                     return historicalRepository.save(historical1);
@@ -38,8 +37,8 @@ public class HistoricalServiceImp implements HistoricalService{
     }
 
     @Override
-    public String delete(Long id) {
-        historicalRepository.deleteById(id);
+    public String delete(Long historical_id) {
+        historicalRepository.deleteById(historical_id);
         return "Deleted is successfully";
     }
 }

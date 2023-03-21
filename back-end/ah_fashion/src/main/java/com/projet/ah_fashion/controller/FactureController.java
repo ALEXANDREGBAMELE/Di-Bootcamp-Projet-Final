@@ -8,29 +8,29 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
-
+@CrossOrigin(allowedHeaders = "*",origins = "*")
 @RestController
-@RequestMapping("/facture")
+@RequestMapping("/api")
 public class FactureController {
     private FactureService factureService;
-    @PostMapping("/create")
+    @PostMapping("/facture")
     public Facture create(@RequestBody Facture facture){
         return factureService.create(facture);
     }
-    @GetMapping("/read")
+    @GetMapping("/facture")
     public List<Facture> read(){
         return factureService.read();
     }
-    @GetMapping("/read/{id}")
-    public Optional<Facture> readById(@PathVariable("id") Long id){
-        return factureService.readById(id);
+    @GetMapping("/facture/{facture_id}")
+    public Optional<Facture> readById(@PathVariable("facture_id") Long facture_id){
+        return factureService.readById(facture_id);
     }
-    @PutMapping("/update")
+    @PutMapping("/facture")
     public Facture update( @RequestBody Facture facture){
         return factureService.update(facture);
     }
-    @DeleteMapping("/delete/{id}")
-    public String delete( @PathVariable("id") Long id){
-        return factureService.delete(id);
+    @DeleteMapping("/facture/{facture_id}")
+    public String delete( @PathVariable("facture_id") Long facture_id){
+        return factureService.delete(facture_id);
     }
 }

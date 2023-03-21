@@ -20,19 +20,20 @@ public class DesignServiceImp implements DesignService {
     public List<Design> read() {
         return designRepository.findAll();
     }
-
+    
     @Override
-    public Optional<Design> readById(Long id) {
-        return designRepository.findById(id);
+    public Optional<Design> readById(Long design_id) {
+        return designRepository.findById(design_id);
     }
 
     @Override
     public Design update(Design design) {
-        return designRepository.findById(design.getId())
+        return designRepository.findById(design.getDesign_id())
                 .map(design1 -> {
                     design1.setLabel(design.getLabel());
-                    design1.setImage(design.getImage());
+                    design1.setImgUrl(design.getImgUrl());
                     design1.setPrice(design.getPrice());
+                    design1.setDescription(design.getDescription());
                     return designRepository.save(design1);
                 }).orElseThrow(
                         () -> new RuntimeException("Objet not fund !")
@@ -40,8 +41,13 @@ public class DesignServiceImp implements DesignService {
     }
 
     @Override
-    public String delete(Long id) {
-        designRepository.deleteById(id);
+    public String delete(Long design_id) {
+        designRepository.deleteById(design_id);
         return "Deleted is successfully";
+    }
+
+    @Override
+    public Optional<List<Design>> readByCategory(String category) {
+        return designRepository.findDesignByCategory(category);
     }
 }

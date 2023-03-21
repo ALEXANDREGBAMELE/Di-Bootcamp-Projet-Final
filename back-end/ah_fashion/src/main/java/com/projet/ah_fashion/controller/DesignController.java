@@ -7,32 +7,36 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
-
+@CrossOrigin(allowedHeaders = "*",origins = "*")
 @RestController
-@RequestMapping("/design")
+@RequestMapping("/api")
 @AllArgsConstructor
 public class DesignController {
     private DesignService designService;
-    @PostMapping("/create")
+    @PostMapping("/design/add")
     public Design create(@RequestBody Design design){
         return designService.create(design);
     }
-    @GetMapping("/read")
+    @GetMapping("/design")
     public List<Design> read(){
         return designService.read();
     }
-    @GetMapping("/read/{id}")
-    public Optional<Design> readById(@PathVariable("id") Long id){
-        return designService.readById(id);
+    @GetMapping("/design/{design_id}")
+    public Optional<Design> readById(@PathVariable("design_id") Long design_id){
+        return designService.readById(design_id);
     }
-    @PutMapping("/update")
+    @PutMapping("/design")
     public Design update(@RequestBody Design design){
         return designService.update(design);
     }
-    @DeleteMapping("/delete")
-    public String delete(@PathVariable("id") Long id){
+    @DeleteMapping("/design")
+    public String delete(@PathVariable("design_id") Long design_id){
 
-        return designService.delete(id);
+        return designService.delete(design_id);
+    }
+    @GetMapping("/design/category/{category}")
+    public Optional<List<Design>> readByCategory(@PathVariable("category") String category){
+        return designService.readByCategory(category);
     }
 
 }

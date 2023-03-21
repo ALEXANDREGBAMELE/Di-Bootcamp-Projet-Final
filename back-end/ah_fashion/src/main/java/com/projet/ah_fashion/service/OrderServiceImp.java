@@ -22,13 +22,13 @@ public class OrderServiceImp implements OrderService{
     }
 
     @Override
-    public Optional<Order> readById(Long id) {
-        return orderRepository.findById(id);
+    public Optional<Order> readById(Long order_id) {
+        return orderRepository.findById(order_id);
     }
 
     @Override
     public Order update(Order order) {
-        return orderRepository.findById(order.getId())
+        return orderRepository.findById(order.getOrder_id())
                 .map(
                         order1 -> {
                             order1.setComment(order.getComment());
@@ -38,8 +38,8 @@ public class OrderServiceImp implements OrderService{
     }
 
     @Override
-    public String delete(Long id) {
-        orderRepository.deleteById(id);
+    public String delete(Long order_id) {
+        orderRepository.deleteById(order_id);
         return "deleted succefuly";
     }
 }

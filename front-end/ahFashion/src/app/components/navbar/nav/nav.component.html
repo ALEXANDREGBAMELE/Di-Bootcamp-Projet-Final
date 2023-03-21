@@ -1,7 +1,7 @@
 
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light main-bg bg-light">
     <!-- Container wrapper -->
     <div class="container-fluid">
       <!-- Toggle button -->
@@ -20,14 +20,14 @@
       <!-- Collapsible wrapper -->
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <!-- Navbar brand -->
-        <a class="navbar-brand mt-2 mt-lg-0" href="#">
+        
           <img
             src="../../../../assets/img/logo/logo.png"
             height="50"
             alt="AhFashion Logo"
             loading="lazy"
           />
-        </a>
+       
         <!-- les liens du gauche debut -->
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           
@@ -35,23 +35,26 @@
             <a class="nav-link" routerLink="/view">Accueil</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/catalogue">Catalogue</a>
+            <a class="nav-link" routerLink="/design">Modèle</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link"routerLink="/contact">Contact</a>
           </li>
 
           <li class="nav-item dashboard">
-            <a class="nav-link" routerLink="/dashboard">Dashboard</a>
+            <a class="nav-link" routerLink="/dashboardadmin">Dashboard</a>
           </li>
-          <li class="nav-item">
+           
             <form class="d-flex mt-3" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <input type="submit" name="" id="" value="Search" class="btn">
+              <input class="form-control me-2 forminput" type="search" placeholder="Search" aria-label="Search">
+              <input type="submit" name="" id="" value="Rechercher" class="btn formbtn bg-primary">
            
             </form>
            
-          </li>
+          
+          
+            <i class="fas fa-shopping-cart"></i>
+          
           
         </ul>
        <!-- login -->

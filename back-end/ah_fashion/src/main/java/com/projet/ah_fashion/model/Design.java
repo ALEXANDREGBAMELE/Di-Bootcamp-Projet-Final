@@ -16,11 +16,16 @@ import java.util.List;
 public class Design {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private long design_id;
     private String label;
-    private String image;
+    private String imgUrl;
+    private String description;
     private double price;
-
+    private String category;
     @OneToMany(mappedBy = "design",cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Order> order = new ArrayList<>();
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn (name = "designCat_id" , referencedColumnName = "designCat_id")
+    private DesignCategory designCategory;
 }

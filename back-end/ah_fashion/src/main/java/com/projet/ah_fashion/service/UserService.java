@@ -8,7 +8,10 @@ import java.util.Optional;
 public interface UserService {
     User create(User user);
     List<User> read();
-    Optional<User> readById(Long id);
+
+    abstract User readByRole(String role);
+
+    Optional<User> readById(Long user_id);
     User update(User user);
-    String delete(Long id);
+    String delete(Long user_id);
 }

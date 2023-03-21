@@ -20,10 +20,7 @@ import { DesignComponent } from './components/design/design.component';
 import { ProfilUserComponent } from './pages/profil-user/profil-user.component';
 import { SidenavComponent } from './users/sidenav/sidenav.component';
 import { HeaderComponent } from './users/header/header.component';
-import { DashbordComponent } from './users/Dashbord/dashbord.component';
-import { HommeComponent } from './users/home/home.component';
 import { LivreurComponent } from './users/livreurs/dashbord/livreur.component';
-import { DashbordRoutingModule } from './users/routes/dashbord.routing';
 import { ViewComponent } from './pages/view/view/view.component';
 import { RegisterComponent } from './authentication/register/register.component';
 import { CatalogueComponent } from './users/couturiers/catalogues/catalogue/catalogue.component';
@@ -49,6 +46,17 @@ import { TissuAddComponent } from './admin/tissu-add/tissu-add.component';
 import { TissuListeComponent } from './admin/tissu-liste/tissu-liste.component';
 import { RouteLivreurModule } from './users/livreurs/route-livreur/route-livreur.module';
 import { RouteClientModule } from './users/clients/route-client/route-client.module';
+import { DashboardCouturierComponent } from "./users/couturiers/dashboard-couturier/dashboard-couturier.component";
+import { CouturierRoutingModule } from './users/couturiers/route/route-couturier.module';
+import { AdminRoutingModule } from './admin/routes/route-admin.module';
+import { DashboardAdminComponent } from './admin/dashboard-admin/dashboard-admin.component';
+import { SidenavAdminComponent } from './admin/sidenav-admin/sidenav-admin.component';
+import { ListeCouturierComponent } from './admin/liste-couturier/liste-couturier.component';
+import { FactureComponent } from './shared/facture/facture.component';
+import { ListeFactureComponent } from './admin/liste-facture/liste-facture.component';
+import { PaiementFactureComponent } from './users/clients/paiement-facture/paiement-facture.component';
+import { PanierComponent } from './users/clients/panier/panier.component';
+import { TissuViewComponent } from './pages/tissu-view/tissu-view.component';
 
 
 @NgModule({
@@ -69,8 +77,6 @@ import { RouteClientModule } from './users/clients/route-client/route-client.mod
             ProfilUserComponent,
             SidenavComponent,
             HeaderComponent,
-            DashbordComponent,
-            HommeComponent,
             LivreurComponent,
             SlideComponent,
             ViewComponent,
@@ -96,7 +102,17 @@ import { RouteClientModule } from './users/clients/route-client/route-client.mod
             DashboardLivreurComponent,
             TissuAddComponent,
             TissuListeComponent,
-            
+            ContactComponent,
+            ListeHistoriqueCouturierComponent,
+            DashboardCouturierComponent,
+            DashboardAdminComponent,
+            SidenavAdminComponent,
+            ListeCouturierComponent,
+            FactureComponent,
+            ListeFactureComponent,
+            PaiementFactureComponent,
+            PanierComponent,
+            TissuViewComponent,
             
         
   ],
@@ -106,9 +122,10 @@ import { RouteClientModule } from './users/clients/route-client/route-client.mod
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
-    DashbordRoutingModule,
     RouteLivreurModule,
-    RouteClientModule
+    RouteClientModule,
+    CouturierRoutingModule,
+    AdminRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

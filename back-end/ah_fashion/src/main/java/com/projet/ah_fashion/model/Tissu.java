@@ -24,7 +24,7 @@ public class Tissu {
     //=============== Attributs =====================
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private long tissu_id;
     private String label;
     private double height;
     private double width;

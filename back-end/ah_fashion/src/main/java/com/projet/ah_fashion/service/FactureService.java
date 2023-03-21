@@ -8,7 +8,7 @@ import java.util.Optional;
 public interface FactureService {
     Facture create(Facture facture);
     List<Facture> read();
-    Optional<Facture> readById(Long id);
+    Optional<Facture> readById(Long facture_id);
     Facture update(Facture facture);
-    String delete(Long id);
+    String delete(Long facture_id);
 }

@@ -7,31 +7,31 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
-
+@CrossOrigin(allowedHeaders = "*",origins = "*")
 @RestController
-@RequestMapping("/tissu")
+@RequestMapping("/api")
 @AllArgsConstructor
 public class TissuController {
     private TissuService tissuService;
-    @PostMapping("/create")
+    @PostMapping("/tissu")
     public Tissu create(@RequestBody Tissu tissu){
         return tissuService.create(tissu);
     }
-    @GetMapping("/read")
+    @GetMapping("/tissu")
     public List<Tissu> read(){
         return tissuService.read();
     }
-    @GetMapping("/read/{id}")
-    public Optional<Tissu> readById( @PathVariable("id") Long id){
-        return tissuService.readById(id);
+    @GetMapping("/tissu/{tissu_id}")
+    public Optional<Tissu> readById( @PathVariable("tissu_id") Long tissu_id){
+        return tissuService.readById(tissu_id);
     }
-    @PutMapping("/update")
+    @PutMapping("/tissu")
     public Tissu update( @RequestBody Tissu tissu){
         return tissuService.update(tissu);
     }
-    @DeleteMapping("/delete/{id}")
-    public String delete( @PathVariable("id") Long id){
-        return tissuService.delete(id);
+    @DeleteMapping("/tissu/{tissu_id}")
+    public String delete( @PathVariable("tissu_id") Long tissu_id){
+        return tissuService.delete(tissu_id);
     }
 
 }

@@ -53,10 +53,10 @@ export class FunctionService {
    // liste design service
 
   createDesign(design : Design): Observable<Object>{
-    return this.httpService.post({endpoint : "/api/design",data : design});
+    return this.httpService.post({endpoint : "/api/design/add",data : design});
    }
    updateDesign(design : Design) {
-     return this.httpService.put({endpoint : '/api/design',data : design});
+     return this.httpService.put({endpoint :"/api/design/",data : design});
    }
  
    getDesign() {

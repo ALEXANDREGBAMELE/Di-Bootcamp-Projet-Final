@@ -16,7 +16,7 @@ public class Facture {
     //=============== Relation OneToMany=====================
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private long facture_id;
     private String label;
     private Date date;
     private double invoiceAmount;
@@ -28,14 +28,14 @@ public class Facture {
 
     //  Relation fils == pere : De facture <== user (client)
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn (name = "user_id",referencedColumnName = "id")
+    @JoinColumn (name = "user_id" , referencedColumnName = "user_id")
     private User user;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "order_id" , referencedColumnName = "id")
+    @JoinColumn(name = "order_id" , referencedColumnName = "order_id")
     private Order order;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "delivery_id" , referencedColumnName = "id")
+    @JoinColumn(name = "delivery_id" , referencedColumnName = "delivery_id")
     private Delivery  delivery;
 }

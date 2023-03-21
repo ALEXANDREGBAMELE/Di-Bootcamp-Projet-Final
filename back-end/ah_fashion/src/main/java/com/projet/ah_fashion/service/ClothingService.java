@@ -8,7 +8,8 @@ import java.util.Optional;
 public interface ClothingService {
     Clothing create(Clothing clothing);
     List<Clothing> read();
-Optional<Clothing> readbyid(Long id);
+    Optional<Clothing> readById(Long clothing_id);
+
     Clothing update(Clothing clothing);
-    String delete(long id);
+    String delete(Long clothing_id);
 }

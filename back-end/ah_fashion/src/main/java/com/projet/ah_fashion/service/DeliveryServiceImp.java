@@ -22,13 +22,13 @@ public class DeliveryServiceImp implements DeliveryService {
     }
 
     @Override
-    public Optional<Delivery> readById(Long id) {
-        return deliveryRepository.findById(id);
+    public Optional<Delivery> readById(Long delivery_id) {
+        return deliveryRepository.findById(delivery_id);
     }
 
     @Override
     public Delivery update(Delivery delivery) {
-        return deliveryRepository.findById(delivery.getId()) .map(delivery1 -> {
+        return deliveryRepository.findById(delivery.getDelivery_id()) .map(delivery1 -> {
             delivery1.setPrice(delivery.getPrice());
             delivery1.setDate(delivery.getDate());
             return deliveryRepository.save(delivery1);
@@ -36,8 +36,8 @@ public class DeliveryServiceImp implements DeliveryService {
     }
 
     @Override
-    public String delete(Long id) {
-        deliveryRepository.deleteById(id);
+    public String delete(Long delivery_id) {
+        deliveryRepository.deleteById(delivery_id);
         return "Deleted is successfully";
     }
 }

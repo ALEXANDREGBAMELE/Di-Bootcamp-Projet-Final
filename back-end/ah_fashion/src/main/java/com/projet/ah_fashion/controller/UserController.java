@@ -7,31 +7,37 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
-
+@CrossOrigin(allowedHeaders = "*",origins = "*")
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/api")
 @AllArgsConstructor
 public class UserController {
     private final UserService userService;
-    @PostMapping("/create")
+    @PostMapping("/user")
     public User create(@RequestBody User user){
         return userService.create(user);
     }
-    @GetMapping("/read")
+    @GetMapping("/user")
     public List<User> read(){
         return userService.read();
     }
-    @GetMapping("/read/{id}")
-    public Optional<User> readById(@PathVariable("id") long id){
-        return userService.readById(id);
+    @GetMapping("/userById/{user_id}")
+    public Optional<User> readById(@PathVariable("user_id") long user_id){
+        return userService.readById(user_id);
     }
-    @PutMapping("/update")
+    //    methode de recuperation d'objet par son role
+    @GetMapping("/userByRole/{role}")
+    public User readByRole(@PathVariable("role") String role){
+        return userService.readByRole(role);
+    }
+
+    @PutMapping("/user")
     public User update(@RequestBody User user){
         return userService.update(user);
     }
-    @DeleteMapping("/delete/{id}")
-    public String delete(@PathVariable("id") long id){
-        return userService.delete(id);
+    @DeleteMapping("/user/{user_id}")
+    public String delete(@PathVariable("user_id") long user_id){
+        return userService.delete(user_id);
     }
 
 
