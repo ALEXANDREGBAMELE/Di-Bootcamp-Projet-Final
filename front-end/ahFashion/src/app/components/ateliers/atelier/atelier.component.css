@@ -2,3 +2,12 @@
     color: blueviolet;
     font-weight: bold;
 }
+
+.card{
+    height: 200px;
+    width: 160px;
+}
+.card img{
+    height: 200px;
+    width: 160px;
+}

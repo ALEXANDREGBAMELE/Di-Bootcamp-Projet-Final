@@ -1,4 +1,4 @@
-
+/* 
 
 .button-group .btn1{
     margin-right:100px  !important;
@@ -40,7 +40,13 @@
 
 .container {
 
-   background-color:  #D980FA;
+   background-color:  #D980FA; */
 
     /* background-color: var(--main-color) !important; */
+/* /*}* */
+
+
+.contct{
+    margin-left: 350px;
+    margin-top: 50px;
 }

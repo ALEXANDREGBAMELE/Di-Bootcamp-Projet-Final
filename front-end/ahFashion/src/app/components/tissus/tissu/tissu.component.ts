@@ -9,7 +9,9 @@ export class TissuComponent {
   imgPagneUrl = [
     "https://kevajo.com/core/uploads/2022/11/Complet-Pagne-Africain-GTP-WAX-GHANA-Escalier-6-Yards-BleuJaune.jpg",
     "https://kevajo.com/core/uploads/2022/11/Complet-Pagne-Africain-GTP-WAX-GHANA-Escalier-6-Yards-BleuJaune.jpg",
-    "https://kevajo.com/core/uploads/2022/11/Complet-Pagne-Africain-GTP-WAX-GHANA-Escalier-6-Yards-BleuJaune.jpg"
+    "https://kevajo.com/core/uploads/2022/11/Complet-Pagne-Africain-GTP-WAX-GHANA-Escalier-6-Yards-BleuJaune.jpg",
+    "https://kevajo.com/core/uploads/2022/11/Complet-Pagne-Africain-GTP-WAX-GHANA-Escalier-6-Yards-BleuJaune.jpg",
+    
   ]
    
   }

@@ -21,7 +21,8 @@
             <td><h5>{{item.description}}</h5></td>
             <td></td>
             <td><input type="button" value="Modifier" class=" btn"></td>
-            <td><input type="button" value="Supprimer" class="bg-danger btn"></td>
+            <td><button (click)="onDeleteDesign(item.design_id)" class="bg-danger btn">Supprimer</button></td>
+            
         </tr>
     </tbody>
 </table>

@@ -23,4 +23,23 @@ export class CatalogueComponent {
     
   )
   }
+  onDeleteDesign(design_id : any) {
+   
+    this.designservice.deleteDesign(design_id).subscribe(
+      
+      (response) => {
+       
+        console.log('Resource deleted successfully');
+        // Do something with the response, if necessary
+         //window.location.reload();
+      },
+      (error) => {
+        console.log('Error deleting resource', error);
+        // Handle the error, if necessary
+        // window.location.reload();
+      }
+      
+    );
+  }
+  
 }
