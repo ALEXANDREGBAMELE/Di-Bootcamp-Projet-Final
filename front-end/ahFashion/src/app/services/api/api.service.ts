@@ -12,6 +12,8 @@ export class HttpService {
   }
 
   get(endpoint : string ) {
+    ///console.log(`${environment.BASE_URL}${endpoint}`);
+    
     return this.http.get(`${environment.BASE_URL}${endpoint}`,{headers : this.httpHeader()});
   }
 

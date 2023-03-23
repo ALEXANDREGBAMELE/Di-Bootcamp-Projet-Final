@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule, ChildrenOutletContexts } from '@angular/router';
+import { FactureComponent } from 'src/app/shared/facture/facture.component';
 import { CatalogueAddFormComponent } from 'src/app/users/couturiers/catalogues/catalogue-add-form/catalogue-add-form.component';
 import { CatalogueComponent } from 'src/app/users/couturiers/catalogues/catalogue/catalogue.component';
 import { ListCommandeCouturierComponent } from 'src/app/users/couturiers/commandes/list-commande-couturier/list-commande-couturier.component';
@@ -69,7 +70,10 @@ const routes: Routes = [
                     path : 'listecouturier',
                     component : ListeCouturierComponent
                   },
-              
+                  {
+                    path : 'facture',
+                    component : FactureComponent,
+                  }
               ]
             }
     

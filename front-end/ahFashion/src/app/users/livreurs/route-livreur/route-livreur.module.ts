@@ -5,7 +5,7 @@ import { DashboardLivreurComponent } from '../dashboard-livreur/dashboard-livreu
 
 const routes: Routes = [
   {
-    path : 'dashbordlivreur',
+    path : '',
     component : DashboardLivreurComponent,
   }
 ]
@@ -13,7 +13,7 @@ const routes: Routes = [
 @NgModule({
   declarations: [ ],
   imports: [
-    RouterModule.forRoot(routes), RouterModule.forRoot(routes),
+    RouterModule.forChild(routes),
     CommonModule
   ]
 })

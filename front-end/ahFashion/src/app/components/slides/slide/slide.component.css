@@ -8,5 +8,14 @@
 .carousel{
     width: 1000px;
     height: 400px;
-    
+   
+}
+
+@media(min-width:400px){
+    .carousel-item{
+        width: 90%;
+        /* margin-left: -68px; */
+    }}
+.tendance{
+    margin-left: -150px;
 }

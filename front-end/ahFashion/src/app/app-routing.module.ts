@@ -16,17 +16,25 @@ import { DesignComponent } from './components/design/design.component';
 import { ContactComponent } from './components/contacts/contact/contact.component';
 import { ListeHistoriqueCouturierComponent } from './users/couturiers/historiques/liste-historique-couturier/liste-historique-couturier.component';
 import { DashboardCouturierComponent } from './users/couturiers/dashboard-couturier/dashboard-couturier.component';
-import { DashboardAdminComponent } from './admin/dashboard-admin/dashboard-admin.component';
 import { PaiementFactureComponent } from './users/clients/paiement-facture/paiement-facture.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { PanierComponent } from './users/clients/panier/panier.component';
 import { AddCommandeComponent } from './users/clients/add-commande/add-commande.component';
 import { FactureComponent } from './shared/facture/facture.component';
+import { AtelierComponent } from './components/ateliers/atelier/atelier.component';
+import { StylisteComponent } from './pages/styliste/styliste.component';
 const routes: Routes = [
 {
-  path : 'view',
+  path :'view',
   component : ViewComponent,
 },
+
+{
+  path :'',
+  redirectTo : 'view',
+  pathMatch : 'full',
+},
+
 {
   path : 'commandeform',
   component : CommandeFormComponent,
@@ -53,18 +61,6 @@ const routes: Routes = [
   path : 'userliste',
   component : UserListeComponent,
 },
-{
-  path : 'dashbordlivreur',
-  component : DashboardLivreurComponent,
-},
-{
-  path : 'dashboardclient',
-  component : DashbordClientComponent,
-},
-{
-  path : 'dashboarcouturier',
-  component : DashboardCouturierComponent,
-},
 
 {
   path : 'dashboardadmin', loadChildren : () =>
@@ -72,9 +68,25 @@ const routes: Routes = [
 },
 
 {
+  path : 'dashboardcouturier', loadChildren : () =>
+  import ('./users/couturiers/route/route-couturier.module').then((cou) => cou.CouturierRoutingModule)
+},
+
+{
+  path : 'dashboardlivreur', loadChildren : () =>
+  import ('./users/livreurs/route-livreur/route-livreur.module').then((liv) => liv.RouteLivreurModule)
+},
+
+{
+  path : 'dashboardclient', loadChildren : () =>
+  import ('./users/clients/route-client/route-client.module').then((cli) => cli.RouteClientModule)
+},
+
+{
   path : 'design',
   component : DesignComponent,
 },
+
 {
   path : 'contact',
   component : ContactComponent,
@@ -103,18 +115,25 @@ const routes: Routes = [
 },
 
 {
+  path : 'styliste',
+  component : StylisteComponent,
+},
+{
+  path : 'atelier',
+  component : AtelierComponent,
+},
+
+{
   path: '**',
   component : NotFoundComponent,
 
 },
-
-
-  
+ 
 ];
 
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes), RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

@@ -29,9 +29,15 @@ export class AddCommandeComponent implements OnInit {
     console.log(this.iddesign);
     
 
-      this.fonction.getDesignById(this.iddesign).subscribe( (datas : any) => {
-        this.designdata = datas;
-        console.log(datas)
+      this.fonction.getDesignById(this.iddesign).subscribe({
+        next:data => {
+          this.designdata = data as Design[];
+        console.log(data)
+        },
+        error :error =>{
+          console.log(error);
+          
+        }
       })
   }
 

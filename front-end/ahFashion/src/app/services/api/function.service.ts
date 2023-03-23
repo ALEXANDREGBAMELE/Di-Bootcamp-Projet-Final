@@ -47,7 +47,7 @@ export class FunctionService {
    }
  
    deleteStyliste(user_id : string) {
-     return this.httpService.delete(`api/user/${user_id}`);
+     return this.httpService.delete(`/api/user/${user_id}`);
    }
 
    // liste design service
@@ -67,11 +67,11 @@ export class FunctionService {
    getDesignById(design_id : number) {
     //  console.log('dsds');
      
-    return this.httpService.get(`api/design/${design_id}`);
+    return this.httpService.get(`/api/design/${design_id}`);
    }
  
    deleteDesign(design_id : any) {
-     return this.httpService.delete(`api/design/delete/${design_id}`);
+     return this.httpService.delete(`/api/design/delete/${design_id}`);
    }
  
 

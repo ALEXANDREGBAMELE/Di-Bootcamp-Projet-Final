@@ -5,6 +5,15 @@ import { FormsModule } from '@angular/forms';
 import { DashbordClientComponent } from '../dashbord-client/dashbord-client.component';
 
 const routes: Routes = [
+  {
+    path : '',
+    component : DashbordClientComponent,
+    // children :[
+    //   {
+        
+    //   }
+    // ]
+  }
  
 ]
 

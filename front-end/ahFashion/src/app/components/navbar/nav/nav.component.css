@@ -122,16 +122,19 @@ ul li :hover{
 
 .forminput{
     margin-top: 10px;
+    /* height: 20px; */
+}
+
+form{
+    margin-left: 100px;
+}
+
+.formbtn{
+    height: 30px;
+    margin-top: 10px;
 }
 
 
-
-.container .footer{
-    height: 250px;
-    border: 2px solid red;
-    margin-top: 15px;
-    background-color: rgb(14, 13, 15);
-}
 
 .col-md-2 .card, .col-md-2 .card .model img {
     height: 150px !important;

@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./view.component.css']
 })
 export class ViewComponent {
-
+  constructor(){
+   
+  }
 }

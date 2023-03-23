@@ -12,7 +12,7 @@ import { ListeReclamationComponent } from '../reclamation/liste-reclamation/list
 const routes: Routes = [
 
   {
-    path: 'dashboardcouturier',
+    path: '',
     component: DashboardCouturierComponent,
     children: [
       
@@ -41,10 +41,7 @@ const routes: Routes = [
                     path : 'listelivreur',
                     component : ListLivreurDisponibleComponent,
                 },
-                {
-                  path : '',
-                  component : ListeReclamationComponent,
-                },
+                
                 {
                   path : 'catalogueformadd',
                   component : CatalogueAddFormComponent,
